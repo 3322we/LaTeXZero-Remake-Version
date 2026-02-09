@@ -1,0 +1,40 @@
+% -----------------------------------
+% LaTeXZero Package for Enumerate Environment
+% -----------------------------------
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Macros/Zenum}
+
+%%% ========== Load Packages ========== %%%
+\RequirePackage[shortlabels,inline]{enumitem}
+\setlist{nolistsep}
+%%% ========== Packages Finished ========== %%%
+
+%%% ========== Define Environments ========== %%%
+%% ======== 括号+阿拉伯数字列表 ========
+\newenvironment{penum}{
+\begin{enumerate}[label=\color{structurecolor}(\arabic*),wide=1em]
+}{
+\end{enumerate}
+} 
+
+%% ======== 括号+罗马数字列表 ========
+\newenvironment{ienum}{
+\begin{enumerate}[label=\color{structurecolor}(\roman*),wide=1em]
+}{
+\end{enumerate}
+} 
+
+%% ========
+\newenvironment{enum}{
+\begin{enumerate}[wide=0em]
+}{
+\end{enumerate}
+}
+%%% ========== Environments Finished ========== %%%
+
+\endinput
+
+
+
+

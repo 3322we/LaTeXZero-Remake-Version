@@ -1,0 +1,30 @@
+% -----------------------------------
+% LaTeXZero Package for Copying Codes
+% -----------------------------------
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Macros/Zcodecopy}
+
+%%% ========== Load Packages ========== %%%
+\RequirePackage[ruled,linesnumbered,noline]{algorithm2e}
+\RequirePackage{listings}
+%%% ========== Packages Finished ========== %%%
+
+%%% ========== Define Styles ========== %%%
+\lstdefinestyle{simpleStyle}{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    keywordstyle=\color{blue},
+    identifierstyle=\color{black},
+    stringstyle=\color{violet},
+    commentstyle=\color[RGB]{34,139,34},
+    showstringspaces=false,
+    numbers=left,
+    numbersep=2em,
+    numberstyle=\footnotesize,
+    frame=single,
+    framesep=1em,
+}
+\lstset{style=simpleStyle}
+%%% ========== Styles Finished ========== %%%
+\endinput
