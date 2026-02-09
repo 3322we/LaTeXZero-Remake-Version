@@ -1,0 +1,68 @@
+% !TeX root = ../book.tex
+
+\section{lstlisting}
+
+\begin{lstlisting}[language=Python,caption={hello world}]
+def hello():
+    print("Hello, world!")
+
+hello()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,caption={hanoi.py}]
+step = 1
+
+
+def hanoi(n, a, b, c, depth=0):
+    def move(n, a, c):
+        global step
+        print("    " * depth, end="")
+        print(f"{step=}: move [{n}] from {a} to {c}")
+        step += 1
+
+    if n == 1:
+        move(n, a, c)
+    else:
+        hanoi(n - 1, a, c, b, depth=depth + 1)
+        move(n, a, c)
+        hanoi(n - 1, b, a, c, depth=depth + 1)
+
+
+if __name__ == "__main__":
+    n = int(input("Hanoi Problem, N = "))
+    hanoi(n, "A", "B", "C")
+\end{lstlisting}
+
+\section{algorithm}
+
+
+\begin{algorithm}[H]
+    \KwIn{This is some input}
+    \KwOut{This is some output}
+    \SetAlgoLined
+    \SetNoFillComment
+    \tcc{This is a comment}
+    \vspace{3mm}
+    some code here\;
+    $x \leftarrow 0$\;
+    $y \leftarrow 0$\;
+    \uIf{$ x > 5$} {
+        x is greater than 5 \tcp*{This is also a comment}
+    }
+    \Else {
+        x is less than or equal to 5\;
+    }
+    \ForEach{y in 0..5} {
+        $y \leftarrow y + 1$\;
+    }
+    \For{$y$ in $0..5$} {
+        $y \leftarrow y - 1$\;
+    }
+    \While{$x > 5$} {
+        $x \leftarrow x - 1$\;
+    }
+    \Return Return something here\;
+    \caption{what}
+\end{algorithm}
+
+

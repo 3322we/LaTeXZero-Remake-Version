@@ -1,0 +1,17 @@
+% !TeX root = ../book.tex
+This template is a remake version of \href{https://github.com/fenglielie/latexzero/tree/main}{LaTeX Templates for Mathematical Notes} without beamer templates.
+
+In this version, we included all theorem styles in one class file (\texttt{LaTeXZero.cls}) by using class options:
+\begin{lstlisting}
+\documentclass[
+    lang=en, %en, cn, Please use XeTeX to compile Chinese files.
+    counter=section, %chapter,section
+    mode=leftsidebox, %box, borderless, leftsidebox, mdframed, simple
+    color=summer %origin, summer, winter,
+]{LaTeXZero}
+\end{lstlisting}
+instead of using seperated \texttt{.tex} files. Moreover, we designed three color styles: \textit{origin} (same as that of the original version), \textit{summer} and \textit{winter}.
+
+The option \texttt{counter} is used for determining whether to number by \textit{chapter} or by \textit{section}. In the former situation, every section in one chapter is nunbered only by one arabic number without the chapter number, and theorems boxs in one section are numbered directly by chapter without the section number. 
+
+Files in this project are well arranged so that users compile successfully the main file (\texttt{book.tex}) just after download, decompress and open this project.
