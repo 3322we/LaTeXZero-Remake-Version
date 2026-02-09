@@ -1,0 +1,38 @@
+\documentclass[
+    lang=en,
+    counter=section,
+    mode=leftsidebox,
+    color=summer
+]{LaTeXZero}
+
+\input{config} %preamble
+
+\begin{document}
+
+%% ======== Cover ========
+% \maketitle
+\makecover{Figures/cover.png}
+
+%% ======== Preface and Contents ========
+\frontmatter
+% ------ Preface ------
+\chapter*{Preface}
+
+    \input{Cha/preface}
+
+\addcontentsline{toc}{chapter}{Preface}
+% ------ Contents ------
+\tableofcontents
+
+%% ======== Main Body ========
+\mainmatter
+% ------ Chapter 1 ------
+\chapter{Mathematical Environments}
+
+    \input{Cha/cha01}
+% ------ Chapter 2 ------
+\chapter{Others}
+
+    \input{Cha/cha02}
+
+\end{document}

@@ -1,0 +1,24 @@
+%%% ========== Configurate Preamble ========== %%%
+
+%% ======== Load Packages ========
+\usepackage{lipsum}
+\usepackage{Macros/Zcodecopy}
+\usepackage{Macros/Zenum}
+\usepackage{Macros/Zfiguretable}
+%% ======== Packages Finished ========
+
+%% ======== Titlepage =========
+\title{\LaTeX{} Note Template MOD}
+\author{Author}
+\date{\today}
+\extrainfo{Origin project: \href{https://github.com/fenglielie/latexzero}{https://github.com/fenglielie/latexzero}}
+%% ======== Titlepage Finished ========
+
+%% ======== Define Commands ========
+\renewcommand{\emph}[1]{
+{\color{structurecolor}\bfseries#1}
+}
+\newcommand{\fullemph}[1]{
+\colorbox{structurecolor!20}{#1}
+}
+%%% ========== Configurate Finished ========== %%%
